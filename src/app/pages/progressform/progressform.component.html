@@ -1,0 +1,92 @@
+<section class="multi_step_form">
+  <form id="msform">
+    <!-- Tittle -->
+    <div class="title">
+      <h2>{{ 'PLAN_YOUR_ADVENTURE' | translate }}</h2>
+      <p>{{ 'DISCOVER_WEATHER_BUDGET' | translate }}</p>
+    </div>
+
+    <!-- progressbar -->
+    <ul id="progressbar">
+      <li *ngFor="let step of steps; let i = index" [class.active]="isStepActive(i)">
+        {{ step | translate }}
+      </li>
+    </ul>
+
+    <!-- fieldsets -->
+    <fieldset *ngIf="currentStep === 0">
+      <!-- Paso 1: Verify Phone -->
+      <!-- ... -->
+      <div class="form-group">
+        <label for="countrySelect" class="form-label">{{ 'SELECT_COUNTRY' | translate }}</label>
+        <select class="form-select mb-5" aria-label="Default select example" [(ngModel)]="selectedCountryId" (change)="onCountryChange()" name="countrySelect">
+          <option *ngFor="let country of countries" [value]="country.id">{{ country.name }}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="citySelect" class="form-label">{{ 'SELECT_CITY' | translate }}</label>
+        <select class="form-select mb-5" aria-label="Default select example" [(ngModel)]="selectedCityId" (change)="onCityChange()" name="citySelect">
+          <option *ngFor="let city of filteredCities" [value]="city.id">{{ city.name }}</option>
+        </select>
+      </div>
+
+      <button type="button" class="next action-button" (click)="nextStep()" [disabled]="isContinueDisabled">{{ 'CONTINUE' | translate }}</button>
+
+    </fieldset>
+
+    <fieldset *ngIf="currentStep === 1">
+      <div class="form-group">
+        <label for="" class="form-label">{{ 'COLOMBIAN_MONEY' | translate }}</label>
+        <input type="number" class="form-control mb-5" name="moneyCop" [(ngModel)]="moneyCop">
+      </div>
+
+      <button type="button" class="action-button previous previous_button" (click)="prevStep()">{{ 'BACK' | translate }}</button>
+      <button type="button" class="next action-button" (click)="submitDataAndUpdate()">{{ 'CONTINUE' | translate }}</button>
+    </fieldset>
+
+    <fieldset *ngIf="currentStep === 2">
+      <div class="c-weather">
+        <aside class="c-weather__side">
+          <figure class="c-weather__side-figure">
+            <img src="https://images.unsplash.com/photo-1559963110-71b394e7494d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80" class="c-weather__side-image">
+            <div class="c-weather__side-gradient"></div>
+          </figure>
+
+          <div class="c-weather__side-content">
+            <div class="c-weather__side-date">
+              <h2 class="c-weather__side-dayname">{{countryName}}</h2>
+              <div class="c-weather__side-day">{{currentDate}}</div>
+              <div class="c-weather__side-location">{{cityname +", "+codeCountry}}</div>
+            </div>
+
+            <div class="c-wather__side-temperature">
+              <h1 class="c-weather__side-temp">{{climate}}°C</h1>
+            </div>
+          </div>
+        </aside>
+
+        <div class="c-weather__infos">
+          <ul class="c-weather__today-list">
+            <li class="c-weather__today-item">
+              <div class="c-weather__today-item-title">{{ 'COLOMBIAN_MONEY' | translate }}</div>
+              <div class="c-weather__today-item-value">{{ moneyCop }}</div>
+            </li>
+
+            <li class="c-weather__today-item">
+              <div class="c-weather__today-item-title">{{ 'CONVERTED_MONEY' | translate }} {{exchangeCountry}}</div>
+              <div class="c-weather__today-item-value">{{ resultConvert }}</div>
+            </li>
+
+            <li class="c-weather__today-item">
+              <div class="c-weather__today-item-title">{{ 'EXCHANGE_RATE' | translate }}</div>
+              <div class="c-weather__today-item-value">{{ exchangeRate }}</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <a (click)="reloadPage()" class="action-button">{{ 'FINISH' | translate }}</a>
+    </fieldset>
+  </form>
+</section>

@@ -1,0 +1,27 @@
+{
+  "SELECCIONA_LENGUAJE": "Selecciona lenguaje",
+  "Español": "Español",
+  "aleman": "Alemán",
+
+  "PLAN_YOUR_ADVENTURE": "Planifica tu Aventura",
+  "DISCOVER_WEATHER_BUDGET": "Descubre el clima y el presupuesto necesario para tu próximo destino emocionante.",
+  "STEP_1": "Selecciona el país",
+  "STEP_2": "Dinero",
+  "STEP_3": "Final",
+  "NAV1": "Historial",
+  "SELECT_COUNTRY": "País",
+  "SELECT_CITY": "Ciudad",
+  "CONTINUE": "Continuar",
+  "BACK": "Atrás",
+  "FINISH": "Finalizar",
+
+  "LAST_5_QUERIES": "Las últimas 5 consultas",
+  "ID": "#",
+  "COUNTRY": "País",
+  "CITY": "Ciudad",
+  "WEATHER": "Clima",
+  "COLOMBIAN_MONEY": "DINERO EN COP",
+  "CONVERTED_MONEY": "DINERO EN",
+  "EXCHANGE_RATE": "Tasa de cambio",
+  "CREATION_DATE": "Fecha de Creación"
+}

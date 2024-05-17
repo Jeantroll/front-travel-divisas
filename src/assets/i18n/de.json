@@ -1,0 +1,30 @@
+{
+  "SELECCIONA_LENGUAJE": "Wählen Sie eine Sprache",
+  "aleman": "Deutsch",
+  "Español": "Spanisch",
+
+  "PLAN_YOUR_ADVENTURE": "Plane deine Abenteuer",
+  "DISCOVER_WEATHER_BUDGET": "Entdecke das Wetter und das nötige Budget für dein nächstes aufregendes Reiseziel.",
+
+
+  "STEP_1": "Wähle das Land",
+  "STEP_2": "Geld",
+  "STEP_3": "Finale",
+  "NAV1": "Verlauf",
+
+  "SELECT_COUNTRY": "Land auswählen",
+  "SELECT_CITY": "Stadt auswählen",
+  "CONTINUE": "Fortsetzen",
+  "BACK": "Zurück",
+  "FINISH": "Beenden",
+  "LAST_5_QUERIES": "Die letzten 5 Abfragen",
+  "ID": "#",
+  "COUNTRY": "Land",
+  "CITY": "Stadt",
+  "WEATHER": "Wetter",
+  "COLOMBIAN_MONEY": "Kolumbianisches Geld",
+  "CONVERTED_MONEY": "Umgerechnetes Geld",
+  "EXCHANGE_RATE": "Wechselkurs",
+  "CREATION_DATE": "Erstellungsdatum"
+
+}

@@ -1,0 +1,31 @@
+<h1 class="text-center pt-4">{{ 'LAST_5_QUERIES' | translate }}</h1>
+
+<div class="container table-responsive py-5">
+  <table class="table table-bordered table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">{{ 'ID' | translate }}</th>
+        <th scope="col">{{ 'COUNTRY' | translate }}</th>
+        <th scope="col">{{ 'CITY' | translate }}</th>
+        <th scope="col">{{ 'WEATHER' | translate }}</th>
+        <th scope="col">{{ 'COLOMBIAN_MONEY' | translate }}</th>
+        <th scope="col">{{ 'CONVERTED_MONEY' | translate }}</th>
+        <th scope="col">{{ 'EXCHANGE_RATE' | translate }}</th>
+        <th scope="col">{{ 'CREATION_DATE' | translate }}</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let consulta of consultas">
+        <th scope="row">{{ consulta.id }}</th>
+        <td>{{ consulta.country_name }}</td>
+        <td>{{ consulta.city_name }}</td>
+        <td>{{ consulta.climate }}°C</td>
+        <td>{{ consulta.money_cop }}</td>
+        <td>{{ consulta.money_foreign_currency }}</td>
+        <td>{{ consulta.exchange_rate }}</td>
+        <td>{{ consulta.created_at }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
